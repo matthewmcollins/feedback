@@ -10,15 +10,22 @@ module.exports = app => {
   );
 
   //route for authentication callback
-  app.get("/auth/google/callback", passport.authenticate("google"));
+  //after they log in, send them to the surveys page
+  app.get(
+    "/auth/google/callback",
+    passport.authenticate("google"),
+    (req, res) => {
+      res.redirect("/surveys");
+    }
+  );
 
   app.get("/api/logout", (req, res) => {
     req.logout();
-    res.send(req.user);
+    res.redirect("/");
   });
 
   //test the current user (the oauth process)
   app.get("/api/current_user", (req, res) => {
-    res.send(req.session);
+    res.send(req.user);
   });
 };
