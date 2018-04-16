@@ -1,7 +1,9 @@
 # feedback
 
-Sample application testing out Google OAuth
+Sample application
+
+Using
+Google OAuth
+SendGrid Email Provider
 
 Node/Express/React
-
-You'll need a config/dev.js with your google API keys, mongoURL, and a cookie key (like prod.js)
