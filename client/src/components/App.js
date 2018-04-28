@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 //BrowserRouter tells React how to behave
 //Route sets up a rule between a certain route user might visit and a set of components
-import { BrowserRouter, Route } from "react-router-dom";
-import { connect } from "react-redux";
-import * as actions from "../actions";
+import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-import Header from "./Header";
-import Landing from "./Landing";
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>SurveyNew</h2>;
+import Header from './Header';
+import Landing from './Landing';
+import Dashboard from './Dashboard';
+import SurveyNew from './surveys/SurveyNew';
 
 class App extends Component {
   componentDidMount() {
